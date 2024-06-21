@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "9bd37eec-c535-47d5-a882-21e6234d7f31",
+		"name": "gettechnologies",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4508795"
+	},
+	"item": [
+		{
+			"name": "persona - findByIdentificacion",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/directorio/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"directorio",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "persona - storePersona",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Test\",\r\n    \"apellidoPaterno\": \"Test\",\r\n    \"apellidoMaterno\": \"Test\",\r\n    \"identificacion\": \"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/directorio/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"directorio",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "persona - findPersonas",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"identificaciones\": [\"1\",\"2\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/directorio/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"directorio",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "persona - deletePersonaByIdentificaion",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/directorio/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"directorio",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "factura - finFacturasByPersona",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/factura/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"factura",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "factura - storeFactura",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fecha\": \"12-07-2024\",\r\n    \"monto\": 137.36,\r\n    \"identifacionPersona\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/factura/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"factura",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
